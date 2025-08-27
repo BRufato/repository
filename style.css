@@ -7,36 +7,18 @@
     font-family: 'Poppins', 'sans-serif';
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    background: red;
+body {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #2a85b9, #48afeb) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.btnLogin-popup{
-    background: transparent;
-    border: 2px solid #008148;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #008148;
-    font-weight: 500;
-    margin-bottom: 5px;
-    transition: .5s;
-}
-.btnLogin-popup:hover{
-    background:#008148;
-    color: #fff;
-}
 .wrapper{
-    position: fixed;
+    position: relative;
     width: 400px;
     height: 440px;
     background: transparent;
@@ -47,68 +29,55 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 40%;
     overflow: hidden;
-    transform: scale(0);
-    transition: transform .5s ease, height .2s ease;
+    transition: height .2s ease;
 }
-.wrapper.active-popup{
-    transform: scale(1);
 
-}
 .wrapper.active{
     height: 520px;
     z-index: 6;
 }
+
 .wrapper .form-box {
     width: 100%;
     padding: 40px;
 }
+
 .wrapper .form-box.login{
     transition: transform .18s ease;
     transform: translateX(0);
 }
+
 .wrapper.active .form-box.login{
     transition: none;
     transform: translateX(-400px);
 }
- .wrapper .form-box.register{
+
+.wrapper .form-box.register{
     position: absolute;
     transition: none;
     transform: translateX(400px);
 }
+
 .wrapper.active .form-box.register{
     transition: transform .18s ease;
     transform: translateX(0);
-}
-.wrapper .icon-close{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background: #333;
-    font-size: 2em;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-    z-index: 4;
-}
+} 
+
 .form-box h2{
     font-size: 2em;
-    color: #333;
+    color: #162938;
     text-align: center;
 }
+
 .input-box{
     position: relative;
     width: 100%;
     height: 50px;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #162938;
     margin: 30px 0;
 }
+
 .input-box label {
     position: absolute;
     top: 50%;
@@ -120,10 +89,12 @@ header {
     pointer-events: none;
     transition: .5s;
 }
+
 .input-box input:focus~label,
 .input-box input:valid~label{
     top: -5px;
 }
+
 .input-box input{
     width: 100%;
     height: 100%;
@@ -135,13 +106,15 @@ header {
     font-weight: 600;
     padding: 0 35px 0 5px;
 }
+
 .input-box .icon {
     position: absolute;
     right: 8px;
     font-size: 1.2em;
-    color: #333;
+    color: #162938;
     line-height: 57px;
 }
+
 .remember-forgot{
     font-size: .9em;
     color: #333;
@@ -150,17 +123,21 @@ header {
     display: flex;
     justify-content: space-between;
 }
+
 .remember-forgot label input{
     accent-color: #333;
     margin-right: 3px;
 }
+
 .remember-forgot a{
     color: #333;
     text-decoration: none;
 }
+
 .remember-forgot a:hover{
     text-decoration: underline;
 }
+
 .btn{
     width: 100%;
     height: 45px;
@@ -173,6 +150,7 @@ header {
     color: #fff;
     font-weight: 500;
 }
+
 .login-register{
     font-size: .9em;
     color: #333;
@@ -180,11 +158,13 @@ header {
     font-weight: 500;
     margin: 25px 0 10px;
 }
+
 .login-register p a {
     color: #333;
     text-decoration: none;
     font-weight: 600;
 }
+
 .login-register p a:hover{
     text-decoration: underline;
 }
